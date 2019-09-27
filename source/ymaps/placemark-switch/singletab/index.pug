@@ -1,0 +1,20 @@
+extends ../../../layouts/main
+
+block title
+  title Yandex Maps placemark switch | Tricks
+
+block content
+  h1 Yandex Maps placemark switch
+  
+  p При загрузке страницы видны все объекты, при нажатии на кнопку остаются только объекты выбранного типа. Для изменения поведения у дива .b-map убирается атрибут data-singletab="true".
+    
+  p Координаты и прочая информация по объектам задаются в переменной yMapPlacemarks в теле страницы. Стиль иконки кластера задаётся в переменной yMapPlacemarksIcons на самой странице, названия других стилей перечислены в
+    | 
+    a( href="https://tech.yandex.ru/maps/archive/doc/jsapi/2.0/ref/reference/option.presetStorage-docpage/" ) документации карт по ссылке
+    |.
+  
+  p
+    a( href="../" ) Переключение на объекты разных типов
+      
+  include ../../../components/map/singletab
+    
