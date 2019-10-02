@@ -1,0 +1,95 @@
+@import '../../styl/component-include.styl'
+
+#yMap
+  height 504px
+  
+.ymaps-2-1-74-balloon__tail
+  display none
+
+.b-map-list-switch
+  font-family Montserrat, Arial, sans-serif
+  
+  &__heading
+    display flex
+    align-items center
+    margin-bottom 18px
+    
+  h3
+    font-size 1.6em
+    margin 0 33px 0 0
+        
+    @media( max-width 575px )
+      margin 0 20px 0 0
+      
+  table
+    width 100%
+    
+  tr
+    border-bottom 1px solid #f2f2f2
+    
+  td
+    padding 20px 10px 20px 0
+    vertical-align top
+    
+.b-mls
+
+  &__nav
+
+    &__item
+      display inline-block
+      cursor pointer
+      line-height 40px
+      padding 0 39px
+      border-radius 20px
+      color #ff72ff
+      font-size .9em
+      position relative
+      overflow hidden
+      background #f2f2f2
+      transform( perspective(1px) translateZ(0) )
+      transition( color .3s linear )
+      
+      &:before
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #ff72ff;
+        transform( scaleX(0))
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        transition( all .3s ease-out )
+        border-radius 20px
+        opacity 0
+        
+      &:first-child
+        margin-right 10px
+        
+        &:before
+          -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+      
+      &.i-active
+        cursor default
+        color #fff
+        
+        &:before
+          transform( scaleX(1))
+          opacity 1
+        
+      @media( max-width 575px )
+        padding 0 15px
+        
+        &:first-child
+          margin-right 5px
+
+  &__tabs
+
+    &__item
+      display none
+      
+      &.i-active
+        display block
