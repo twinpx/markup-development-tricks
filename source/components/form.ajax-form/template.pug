@@ -1,0 +1,32 @@
+// start /components/form.ajax-form/
+
+link( rel="stylesheet", href="/components/form.ajax-form/style.css" )
+script( src="/components/form.ajax-form/script.js" )
+
+.b-ajax-form
+
+  .b-ajax-form__error Произошла ошибка!
+  
+  form( action="/components/form.ajax-form/ajax-request.json" method="GET" )
+    
+    .input-field
+      input#first_name.validate( type="text" required )
+      label( for="first_name" ) Контактное лицо
+    
+    .input-field
+      input#email.validate( type="email" required )
+      label( for="email" ) Email
+    
+    .input-field
+      input#tel.validate( type="tel" required )
+      label( for="tel" ) Телефон
+      
+    button.btn.btn-default( type="submit" ) Отправить
+    
+  .b-ajax-form__response
+    p Ваш заказ номер #<span id="formResponseID-1"></span> принят и обрабатывается нашим сотрудником, мы обязательно свяжеся с вами!
+    p Номер вашего заказа #<span id="formResponseID-2"></span>
+    
+  
+
+// end /components/form.ajax-form/

@@ -331,6 +331,16 @@ module.exports = function( grunt ) {
             dest: '<%= prod %>'
           }
         ]
+      },
+      json: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= source %>components/',
+            src: [ '**/*.json' ],
+            dest: '<%= dest %>components/'
+          }
+        ]
       }
     },
     
@@ -390,7 +400,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   
   grunt.registerTask( 'css', [ 'stylus:template', 'stylus:components', 'concat:pluginsCSS' ] );
-  grunt.registerTask( 'js', [ 'concat:js', 'jshint:dev', 'concat:pluginsJS', 'uglify:devTemplate', 'uglify:devComponents', 'clean:js' ] );
+  grunt.registerTask( 'js', [ 'concat:js', 'jshint:dev', 'concat:pluginsJS', 'uglify:devTemplate', 'uglify:devComponents', 'clean:js', 'copy:json' ] );
   grunt.registerTask( 'html', [ 'copy:images', 'pug:dev' ] );
   grunt.registerTask( 'default', [ 'connect', 'css', 'js', 'html', 'watch' ] );
   
