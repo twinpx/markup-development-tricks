@@ -41,18 +41,22 @@
           data: $form.serialize(),
           success: function( data ) {
             
-            if ( data && typeof data === 'object' && data.STATUS && data.STATUS === 'Y' ) {
-              $( '#formResponseID-1, #formResponseID-2' ).text( data.ID );
+            if ( data && typeof data === 'object' && data.STATUS ) {
+              if ( data.STATUS === 'Y' && data.MESSAGE ) {
+                $( '#formResponseID-1, #formResponseID-2' ).text( data.MESSAGE );
+                $form.hide();
+                $error.hide();
+                $response.show();
+              } else if ( data.STATUS === 'N' && data.MESSAGE ) {
+                $form.show();
+                $error.show();
+                $( '.b-ajax-form__error' ).text( data.MESSAGE );
+                $response.hide();
+              }
             }
             
-            $form.hide();
-            $error.hide();
-            $response.show();
-            
           },
-          error: function( a, b, c ) {
-            $error.show();
-            
+          error: function( a, b, c ) {            
             if ( window.console ) {
               console.log(a);
               console.log(b);

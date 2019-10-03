@@ -1,0 +1,21 @@
+// start /components/sidenav/
+
+link( rel="stylesheet", href="/components/sidenav/style.css" )
+script( src="/components/sidenav/script.js" )
+  
+script( src="/components/sidenav/materialize/materialize-0.97.5.js" )
+link( href="/components/sidenav/materialize/materialize-0.97.5.css" rel="stylesheet" )
+
+button#sideNavButton-0-97-5.btn.btn-default( data-activates="sideNav-0-97-5" ) Открыть
+
+#sideNav-0-97-5.side-nav Боковая панель
+  button.btn.btn-default Закрыть
+  
+p Если ширина menuWidth указана в % - кнопка закрытия работать не будет.
+  
+button#sideNavButton2-0-97-5.btn.btn-default( data-activates="sideNav2-0-97-5" ) Открыть (ширина в %)
+
+#sideNav2-0-97-5.side-nav Боковая панель 2
+  button.btn.btn-default Закрыть (не работает)
+
+// end /components/sidenav/
