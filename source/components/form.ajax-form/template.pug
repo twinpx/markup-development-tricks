@@ -10,15 +10,15 @@ script( src="/components/form.ajax-form/script.js" )
   form( action="/components/form.ajax-form/ajax-request.json" method="GET" )
     
     .input-field
-      input#first_name.validate( type="text" required )
+      input#first_name( type="text" required )
       label( for="first_name" ) Контактное лицо
     
     .input-field
-      input#email.validate( type="email" required )
+      input#email( type="email" required )
       label( for="email" ) Email
     
     .input-field
-      input#tel.validate( type="tel" required )
+      input#tel( type="text" required )
       label( for="tel" ) Телефон
       
     button.btn.btn-default( type="submit" ) Отправить
