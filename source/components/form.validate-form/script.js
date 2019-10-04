@@ -4,18 +4,12 @@
   
   $( function() {
     
-    $( '.b-ajax-form' ).each( function() {
+    $( '.b-validate-form' ).each( function() {
       
       var $this = $( this ),
           $form = $this.find( 'form' ),
-          $response = $this.find( '.b-ajax-form__response' ),
-          $error = $this.find( '.b-ajax-form__error' ),
           $submitButton = $form.find( '.btn[ type=submit ]' );
           
-      if ( $.fn.mask ) {
-        $form.find( '#tel' ).mask( '+9 (999) 999 99 99' );
-      }
-      
       $submitButton.click( function(e) {
         var errorFlag = false;
         
@@ -65,47 +59,27 @@
           
         });
         
+        //validate url input
+        $form.find( 'input[ type="url" ]' ).each( function() {
+          
+          var $urlInput = $( this );
+          var urlString = $urlInput.val();
+          var urlRegExp = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/ig;
+        
+          if ( !urlString.match( urlRegExp )) {
+            $urlInput.closest( '.input-field' ).addClass( 'invalid' );
+            $urlInput.siblings( 'label' ).addClass( 'active' );
+            errorFlag = true;
+          } else {
+            $urlInput.closest( '.input-field' ).removeClass( 'invalid' );
+          }
+          
+        });
+        
         if ( errorFlag ) {
           e.preventDefault();
           $form.find( '.input-field.invalid:eq(0) input' ).focus();
         }
-      });
-      
-      $form.submit( function(e) {
-        e.preventDefault();
-        
-        //send ajax
-        $.ajax({
-          url: $form.attr( 'action' ),
-          type: $form.attr( 'method' ),
-          dataType: "json",
-          data: $form.serialize(),
-          success: function( data ) {
-            
-            if ( data && typeof data === 'object' && data.STATUS ) {
-              if ( data.STATUS === 'Y' && data.MESSAGE ) {
-                $( '#formResponseID-1, #formResponseID-2' ).text( data.MESSAGE );
-                $form.hide();
-                $error.hide();
-                $response.show();
-              } else if ( data.STATUS === 'N' && data.MESSAGE ) {
-                $form.show();
-                $error.show();
-                $( '.b-ajax-form__error' ).text( data.MESSAGE );
-                $response.hide();
-              }
-            }
-            
-          },
-          error: function( a, b, c ) {            
-            if ( window.console ) {
-              console.log(a);
-              console.log(b);
-              console.log(c);
-            }
-          }
-        });
-        
       });
     });
   

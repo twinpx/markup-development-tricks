@@ -1,0 +1,29 @@
+extends ../../layouts/main
+
+block title
+  title Validate Form | Tricks
+
+block content
+  h1 Validate Form
+  
+  p Валидация формы без Materialize
+    
+  include ../../components/form.validate-form/template
+  
+  p Валидация Materialize. Неполная проверка полей email и tel.
+
+  form( action="/components/form.ajax-form/ajax-request.json" method="GET" )
+    
+    .input-field
+      input#first_name2.validate( type="text" required )
+      label( for="first_name2" ) Контактное лицо
+    
+    .input-field
+      input#email2.validate( type="email" required )
+      label( for="email2" ) Email
+    
+    .input-field
+      input#tel2.validate( type="tel" required )
+      label( for="tel2" ) Телефон
+      
+    button.btn.btn-default( type="submit" ) Отправить

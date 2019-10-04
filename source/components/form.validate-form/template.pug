@@ -1,0 +1,28 @@
+// start /components/form.validate-form/
+
+link( rel="stylesheet", href="/components/form.validate-form/style.css" )
+script( src="/components/form.validate-form/script.js" )
+
+.b-validate-form
+
+  form( action="/components/form.ajax-form/ajax-request.json" method="GET" )
+    
+    .input-field
+      input#first_name( type="text" )
+      label( for="first_name" ) Контактное лицо
+    
+    .input-field
+      input#email( type="email" )
+      label( for="email" ) Email
+    
+    .input-field
+      input#tel( type="tel" )
+      label( for="tel" ) Телефон
+    
+    .input-field
+      input#url( type="url" )
+      label( for="url" ) URL
+      
+    button.btn.btn-default( type="submit" ) Отправить
+
+// end /components/form.validate-form/
