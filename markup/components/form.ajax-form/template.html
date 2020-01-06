@@ -1,0 +1,27 @@
+
+<!-- start /components/form.ajax-form/-->
+<link rel="stylesheet" href="/components/form.ajax-form/style.css"/>
+<script src="/components/form.ajax-form/script.js"></script>
+<div class="b-ajax-form">
+  <div class="b-ajax-form__error">Произошла ошибка!</div>
+  <form action="/components/form.ajax-form/ajax-request.json" method="GET">
+    <div class="input-field">
+      <input id="first_name" type="text" required="required"/>
+      <label for="first_name">Контактное лицо</label>
+    </div>
+    <div class="input-field">
+      <input id="email" type="email" required="required"/>
+      <label for="email">Email</label>
+    </div>
+    <div class="input-field">
+      <input id="tel" type="text" required="required"/>
+      <label for="tel">Телефон</label>
+    </div>
+    <button class="btn btn-default" type="submit">Отправить</button>
+  </form>
+  <div class="b-ajax-form__response">
+    <p>Ваш заказ номер #<span id="formResponseID-1"></span> принят и обрабатывается нашим сотрудником, мы обязательно свяжеся с вами!</p>
+    <p>Номер вашего заказа #<span id="formResponseID-2"></span></p>
+  </div>
+</div>
+<!-- end /components/form.ajax-form/-->

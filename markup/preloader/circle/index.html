@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circle preloader | Tricks</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;amp;subset=cyrillic">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="/template/script.js"></script>
+  </head>
+  <body>
+    <header class="b-header">
+      <div class="container"></div>
+    </header>
+    <section class="container">
+      <h1>Circle preloader</h1>
+      <!-- start /components/preloader/-->
+      <link rel="stylesheet" href="/components/preloader/style.css">
+      <script src="/components/preloader/script.js"></script>
+      <button class="waves-effect waves-light btn b-color-preloader-button">Color Preloader</button>
+      <button class="waves-effect waves-light btn b-white-preloader-button">White Preloader</button>
+      <button class="waves-effect waves-light btn b-black-preloader-button">Black Preloader</button>
+      <div id="container"></div>
+      <div id="circlePreloader">
+        <div class="preloader-wrapper active">
+          <div class="spinner-layer">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end /components/preloader/-->
+    </section>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

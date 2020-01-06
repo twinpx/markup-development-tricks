@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yandex Maps map list switch | Tricks</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;amp;subset=cyrillic">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="/template/script.js"></script>
+  </head>
+  <body>
+    <header class="b-header">
+      <div class="container"></div>
+    </header>
+    <section class="container">
+      <h1>Yandex Maps map list switch</h1>
+      <!-- start /components/map-list-switch/-->
+      <link rel="stylesheet" href="/components/map-list-switch/style.css">
+      <script src="/components/map-list-switch/script.js"></script>
+      <div class="b-map-list-switch">
+        <div class="b-map-list-switch__heading">
+          <h3>Где купить</h3>
+          <div class="b-mls__nav"><span class="b-mls__nav__item i-active" data-tab="map">На карте</span><span class="b-mls__nav__item" data-tab="list">Списком</span></div>
+        </div>
+        <div class="b-mls__tabs">
+          <div class="b-mls__tabs__item i-active" data-tab="map">
+            <script>
+              var yMapPlacemarks = [ { coords: [ 55.751572, 37.573855 ], icon:  '/components/map-list-switch/images/map-placemark.png', balloon: { img: '/upload/map-list-switch/1.jpg', title: 'Магазин на Водном 1', description: 'улица Адмирала Макарова, дом 14', href: '/' } }, { coords: [ 55.741570, 37.573854 ], icon:  '/components/map-list-switch/images/map-placemark.png', balloon: { img: '/upload/map-list-switch/2.jpg', title: 'Магазин на Водном 2', description: 'улица Адмирала Макарова, дом 15', href: '/' }  }, { coords: [ 55.781571, 37.573856 ], icon:  '/components/map-list-switch/images/map-placemark.png', balloon: { img: '/upload/map-list-switch/3.jpg', title: 'Магазин на Водном 3', description: 'улица Адмирала Макарова, дом 16', href: '/' }  }, { coords: [ 55.781573, 37.513853 ], icon:  '/components/map-list-switch/images/map-placemark.png', balloon: { img: '/upload/map-list-switch/4.jpg', title: 'Магазин на Водном 4', description: 'улица Адмирала Макарова, дом 17', href: '/' }  } ];
+              //cluster icons are black by default
+              var yMapPlacemarksIcons = 'pinkClusterIcons';//take a look here for different icons https://tech.yandex.ru/maps/archive/doc/jsapi/2.0/ref/reference/option.presetStorage-docpage/
+            </script>
+            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=1ac0f649-71bc-46a0-81e9-aa38258cf982" type="text/javascript"></script>
+            <div id="yMap"></div>
+          </div>
+          <div class="b-mls__tabs__item" data-tab="list">
+            <div class="b-map-list-switch__list">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><b>Магазин на Алтуфьево</b><br>Алтуфьевское шоссе, дом 56</td>
+                    <td>Метро: Алтуфьево, Бибирево</td>
+                    <td>Мало</td>
+                  </tr>
+                  <tr>
+                    <td><b>Магазин Бабушкинская</b><br>Енисейская улица, дом 17/1 т</td>
+                    <td>Метро: Бабушкинская</td>
+                    <td>Мало</td>
+                  </tr>
+                  <tr>
+                    <td><b>Магазин на Алтуфьево</b><br>Проспект Мира, дом 146</td>
+                    <td>Метро: ВДНХ</td>
+                    <td>Мало</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end /components/map-list-switch/-->
+    </section>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

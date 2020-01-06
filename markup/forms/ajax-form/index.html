@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax Form | Tricks</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;amp;subset=cyrillic">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="/template/script.js"></script>
+  </head>
+  <body>
+    <header class="b-header">
+      <div class="container"></div>
+    </header>
+    <section class="container">
+      <h1>Ajax Form</h1>
+      <p>Проверка полей на заполненность по нажатию кнопки, проверка поля телефона, маска для телефона.</p>
+      <p>Внимание! Materialize проверяет телефон сам, поэтому для наложения маски используем поле text с id="tel".</p>
+      <!-- start /components/form.ajax-form/-->
+      <link rel="stylesheet" href="/components/form.ajax-form/style.css">
+      <script src="/components/form.ajax-form/script.js"></script>
+      <div class="b-ajax-form">
+        <div class="b-ajax-form__error">Произошла ошибка!</div>
+        <form action="/components/form.ajax-form/ajax-request.json" method="GET">
+          <div class="input-field">
+            <input id="first_name" type="text" required>
+            <label for="first_name">Контактное лицо</label>
+          </div>
+          <div class="input-field">
+            <input id="email" type="email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field">
+            <input id="tel" type="text" required>
+            <label for="tel">Телефон</label>
+          </div>
+          <button class="btn btn-default" type="submit">Отправить</button>
+        </form>
+        <div class="b-ajax-form__response">
+          <p>Ваш заказ номер #<span id="formResponseID-1"></span> принят и обрабатывается нашим сотрудником, мы обязательно свяжеся с вами!</p>
+          <p>Номер вашего заказа #<span id="formResponseID-2"></span></p>
+        </div>
+      </div>
+      <!-- end /components/form.ajax-form/-->
+    </section>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+@import '../../styl/component-include.styl'
+
+.b-files
+
+  .row
+    margin 0 -.75rem
+  
+  hr
+    border 0
+    margin 0
+    padding 15px 0
+    
+    &.i-size-L
+      padding 30px 0
+    
+    &.i-size-S
+      padding 10px 0
+
+.b-file-card
+  position relative
+
+  &__placeholder
+    display flex
+    align-items center
+    transition( opacity .2s ease )
+    
+    .i-loaded &
+      opacity 0
+      position absolute
+      top 0
+      left 0
+      width 100%
+    
+    .b-ph__img
+      width 49px
+      height 64px
+      background-color #f2f2f2
+      margin-right 27px
+      
+    .b-ph__text
+      width calc( 100% - 76px )
+    
+    .b-ph__line1
+      display block
+      width 70%
+      height 10px
+      background-color #f2f2f2
+      margin-bottom 5px
+    
+    .b-ph__line2
+      display block
+      width 45%
+      height 10px
+      background-color #f2f2f2
+
+  &__content
+    display flex
+    align-items center
+    opacity 0
+    transition( opacity .5s ease )
+    position absolute
+    top 0
+    left 0
+    width 100%
+    z-index 1
+    
+    .i-loaded &
+      opacity 1
+      position static
+    
+  &__img
+    width 49px
+    height 64px
+    margin-right 27px
+    background-repeat no-repeat
+    background-position center
+    background-size cover
+      
+  &__text
+    width calc( 100% - 76px )
+    line-height 1.2
+    
+    b
+      display block
+      margin-bottom 3px
+      
+    .text-muted
+      display block
+      font-size 8pt

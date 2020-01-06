@@ -1,0 +1,1 @@
+!function(i){"use strict";i(function(){setTimeout(function(){i(".b-file-card").addClass("i-loaded")},500)})}(jQuery);
