@@ -33,17 +33,26 @@
         
         if ( tab ) {
           yMapPlacemarks[ tab ].forEach( function( elem ) {
-            clusterer.add( new ymaps.Placemark( elem.coords, {}, {
+            var placemark = new ymaps.Placemark( elem.coords, {}, {
               iconLayout: 'default#image',
               iconImageHref: elem.icon,
               iconImageSize: [32, 32],
               iconImageOffset: [-16, -16]
-            }));
+            });
+            placemark.events.add( 'click', function() {
+              if ( elem.href ) {
+                window.location = elem.href;
+              }
+            });
+            clusterer.add( placemark );
           });
         }
       });
       
       myMap.geoObjects.add( clusterer );
+      
+      //bounds
+      myMap.setBounds( clusterer.getBounds(), { checkZoomRange: true, duration: 500 });
       
       //on click
       $( '.b-map__nav-item' ).click( function() {
@@ -75,6 +84,8 @@
         });
         
         //myMap.geoObjects.add( clusterer );
+        //bounds
+        myMap.setBounds( clusterer.getBounds(), { checkZoomRange: true, duration: 500 });
         
       });
       

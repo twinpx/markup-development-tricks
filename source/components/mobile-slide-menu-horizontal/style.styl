@@ -1,0 +1,46 @@
+@import '../../styl/component-include.styl'
+
+.b-mobile-slide-menu-horizontal
+  
+  .bj-page-header__submenu
+    padding 10px 0 0
+    height 60px
+    overflow hidden
+    background-color #fff
+    
+    .swiper-container
+      transform( translateX( 100px ))
+      opacity 0
+      transition( all .5s ease )
+    
+    &.i-animate .swiper-container
+      opacity 1
+      transform( translate(0))
+    
+    .container-fluid
+      position relative
+      
+    a
+      
+      &,
+      &.swiper-slide
+        line-height 40px
+        display inline-block
+        margin-right 30px
+        width auto
+        
+    .swiper-container.swiper-container-initialized
+    
+      a
+      
+        &,
+        &.swiper-slide
+          width auto !important
+      
+    &__line
+      position absolute
+      bottom -10px
+      left 15px
+      content ''
+      width calc( 100% - 30px )
+      border-top 1px solid #f2f2f2

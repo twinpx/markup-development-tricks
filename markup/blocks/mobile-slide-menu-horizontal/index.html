@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mobile slide menu | Tricks</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="/template/template_styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;amp;subset=cyrillic">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="/template/jquery-3.3.1.min.js"></script>
+    <script src="/template/script.js"></script>
+  </head>
+  <body>
+    <header class="b-header">
+      <div class="container"></div>
+    </header>
+    <section class="container">
+      <h1>Mobile slide menu</h1>
+      <!-- start /components/mobile-slide-menu-horizontal/-->
+      <link rel="stylesheet" href="/components/mobile-slide-menu-horizontal/style.css">
+      <script src="/components/mobile-slide-menu-horizontal/script.js"></script>
+      <div class="b-mobile-slide-menu-horizontal">
+        <section class="bj-page-header__submenu">
+          <div class="container-fluid">
+            <script src="/template/libs/swiper.min.js"></script>
+            <link rel="stylesheet" href="/template/libs/swiper.min.css">
+            <div class="swiper-container"> 
+              <div class="swiper-wrapper"> <a class="swiper-slide" href="">Верхняя одежда</a><a class="swiper-slide" href="">Пальто</a><a class="swiper-slide" href="">Костюмы</a><a class="swiper-slide" href="">Пиджаки, жилеты</a><a class="swiper-slide" href="">Куртки</a><a class="swiper-slide" href="">Брюки</a><a class="swiper-slide" href="">Сорочки, рубашки, манишки</a></div>
+              <div class="swiper-shadow"></div>
+            </div>
+            <div class="bj-page-header__submenu__line"></div>
+          </div>
+        </section>
+      </div>
+      <!-- end /components/mobile-slide-menu-horizontal/-->
+      <p>Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart.</p>
+      <p>This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.</p>
+      <p>This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
+      <p>space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.</p>
+      <p>There are also two additional keywords you can pair with these values: safe and unsafe. Using safe ensures that however you do this type of positioning, you can't push an element such that it renders off-screen (e.g. off the top) in such a way the content can't be scrolled too (called "data loss").</p>
+      <p>The safe and unsafe modifier keywords can be used in conjunction with all the rest of these keywords (although note browser support), and deal with helping you prevent aligning elements such that the content becomes inaccessible.</p>
+      <p>The safe and unsafe modifier keywords can be used in conjunction with all the rest of these keywords (although note browser support), and deal with helping you prevent aligning elements such that the content becomes inaccessible.</p>
+      <p>If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).</p>
+      <p>This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property" (which was temporarily done by the main-size keyword until deprecated). The content keyword means "size it based on the item's content" - this keyword isn't well supported yet, so it's hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</p>
+      <p>I`ve got only a question. When you define main-axis you say that its direction depends on the justify-content property, but isn`t the flex-direction property that defines if flex items are layed out as a row or as a column? Am I misunderstanding something?</p>
+      <p>It`s not very clear how `order` actually works. `order: 3` doesn`t mean `put it at the third position`, it means `put it after any items with `order` less than 3 and before any items with `order` greater than 3`.</p>
+      <p>We (the Flexbox spec editors) strongly recommend not using the longhands of `flex` unless you really, really want to cascade in flex settings from some other style rule, so I`d suggest somehow discouraging the use of `flex-grow/shrink/basis` here (or, preferably, leaving it out/in an advanced section). The shorthand resets things in appropriate ways, and will therefore result in fewer cascading errors. Please use the shorthand!</p>
+    </section>
+    <footer class="b-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
