@@ -1,0 +1,39 @@
+@import '../../styl/component-include.styl'
+
+.b-plyr {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	overflow: hidden
+}
+.b-video-plyr {
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 300%;
+	pointer-events: none
+}
+.b-plyr-shutter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000
+}
+@media (max-width: 1024px) {
+	.b-plyr {
+		height: 500px;
+	}
+}
+@media (max-width: 768px) {
+	.b-plyr {
+		height: 350px;
+	}
+}
+@media (max-width: 560px) {
+	.b-plyr {
+		height: 260px;
+	}
+}

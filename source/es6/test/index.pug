@@ -1,0 +1,12 @@
+extends ../../layouts/main
+
+block title
+  title Ajax Form | Tricks
+
+block content
+  h1 Ajax Form
+  
+  p Проверка полей на заполненность по нажатию кнопки, проверка поля телефона, маска для телефона.
+  p Внимание! Materialize проверяет телефон сам, поэтому для наложения маски используем поле text с id="tel".
+    
+  include ../../components/form.ajax-form/template

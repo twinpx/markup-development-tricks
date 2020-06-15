@@ -1,0 +1,1 @@
+!function(t){"use strict";t(function(){setTimeout(function(){t(".b-ph-block").addClass("i-ph-animated")},500)})}(jQuery);

@@ -1,0 +1,31 @@
+@import '../../styl/component-include.styl'
+
+.b-ph
+
+  &-block
+    position relative
+        
+  &-content
+    position absolute
+    top 0
+    left 0
+    width 100%
+    transition( opacity .5s ease )
+    opacity 0
+    z-index 0
+    
+  
+  &-img
+    background-color $placeholder-color
+    padding-top 80%
+    margin-bottom 20px
+  
+  &-text
+    
+    div
+      height 7px
+      background-color $placeholder-color
+      margin-bottom 15px
+      
+      &:last-child
+        width 70%
