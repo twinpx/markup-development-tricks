@@ -1,1 +1,1 @@
-!function(){"use strict";jQuery(function(){})}();
+!function(n){"use strict";n(function(){new Plyr("#player",{controls:!1,autoplay:!0}).on("canplay",function(a){n(".b-plyr").addClass("i-canplay")}),new Plyr("#playerYt",{controls:!1,autoplay:!0}).on("ready",function(a){n(".b-plyr-yt").addClass("i-canplay")})})}(jQuery);

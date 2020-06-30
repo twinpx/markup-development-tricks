@@ -2,8 +2,12 @@
 <!-- start /components/video.plyr/-->
 <link rel="stylesheet" href="/components/video.plyr/style.css"/>
 <script src="/components/video.plyr/script.js"></script>
+<link rel="stylesheet" href="/template/libs/plyr.min.css"/>
+<script src="/template/libs/plyr.min.js"></script>
 <div class="b-plyr">
-  <div class="b-video-plyr" id="player" data-videoid="1-gnOyThHg4" data-width="100%" data-height="600"></div>
-  <div class="b-plyr-shutter"></div>
+  <div class="preloader"></div>
+  <video id="player" playsinline="playsinline" autoplay="autoplay" muted="muted" data-poster="/upload/map-list-switch/1.jpg">
+    <source src="/upload/ALLACOUTURE2.mp4" type="video/mp4"/>
+  </video>
 </div>
 <!-- end /components/video.plyr/-->
