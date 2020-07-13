@@ -8,7 +8,8 @@
     var player = new Plyr( '#player', {
       controls: false,
       autoplay: true,
-      muted: true
+      muted: true,
+      loop: true
     });
 
     player.on( 'canplay', function(e) {
@@ -19,7 +20,8 @@
     var playerYt = new Plyr( '#playerYt', {
       controls: false,
       autoplay: true,
-      muted: true
+      muted: true,
+      loop: true
     });
 
     playerYt.on( 'ready', function(e) {
@@ -31,7 +33,8 @@
     var player2 = new Plyr( '#player2', {
       controls: false,
       autoplay: true,
-      muted: true
+      muted: true,
+      loop: true
     });
     
     player2.on( 'ready', function(e) {
