@@ -91,7 +91,7 @@
               } else if ( data.STATUS === 'N' && data.MESSAGE ) {
                 $form.show();
                 $error.show();
-                $( '.b-ajax-form__error' ).text( data.MESSAGE );
+                $error.text( data.MESSAGE );
                 $response.hide();
               }
             }

@@ -1,4 +1,8 @@
-$( '.b-float-label input, .b-float-label textarea' ).blur( function() {
+$( '.b-float-label input, .b-float-label textarea' ).each( function() {
+  if ( $.trim( $( this ).val()) !== '' ) {
+    $( this ).siblings( 'label' ).addClass( 'active' );
+  }
+}).blur( function() {
   var $input = $( this ),
       $label = $input.siblings( 'label' );
   if ( $input.val() !== '' ) {
