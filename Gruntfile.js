@@ -344,6 +344,17 @@ module.exports = function( grunt ) {
       }
     },
     
+    mocha: {
+      test: {
+        options: {
+          logErrors: true,
+          growlOnFail: false,
+          growlOnSuccess: false
+        },
+        src: [ '<%= dest %>components/timetable/test.js' ],
+      },
+    },
+    
     watch: {
       livereload: {
         options: {
@@ -398,10 +409,12 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-concat' );
   grunt.loadNpmTasks( 'grunt-contrib-clean' );
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+  grunt.loadNpmTasks( 'grunt-mocha' );
   
   grunt.registerTask( 'css', [ 'stylus:template', 'stylus:components', 'concat:pluginsCSS' ] );
   grunt.registerTask( 'js', [ 'concat:js', 'jshint:dev', 'concat:pluginsJS', 'uglify:devTemplate', 'uglify:devComponents', 'clean:js', 'copy:json' ] );
   grunt.registerTask( 'html', [ 'copy:images', 'pug:dev' ] );
+  grunt.registerTask( 'test', [ 'mocha' ] );
   grunt.registerTask( 'default', [ 'connect', 'css', 'js', 'html', 'watch' ] );
   
   grunt.registerTask( 'prod', [
